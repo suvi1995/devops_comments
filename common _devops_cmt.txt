@@ -1,0 +1,2 @@
+chmod 400 <.pem file>
+ssh -i <.pem> ubuntu@<pub ip>
