@@ -1,0 +1,50 @@
+creat ansible user
+--------------------
+sudo adduser ansible
+sudo visudo
+>>
+  ansible ALL(ALL:ALL) NOPASSWD: ALL
+sudo vi /etc/ssh/shhd_config
+>>
+  passwordaunthenication yes
+sudo service sshd restart
+
+install ansible
+-----------------
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+
+edit config
+--------------
+sudo vi /etc/ansible/ansible_cfg
+[defaults]
+
+# some basic default values...
+
+inventory      = /etc/ansible/hosts
+#library        = /usr/share/my_modules/
+#module_utils   = /usr/share/my_module_utils/
+#remote_tmp     = ~/.ansible/tmp
+#local_tmp      = ~/.ansible/tmp
+#plugin_filters_cfg = /etc/ansible/plugin_filters.yml
+#forks          = 5
+#poll_interval  = 15
+#sudo_user      = root
+#ask_sudo_pass = True
+#ask_pass      = True
+#transport      = smart
+#remote_port    = 22
+#module_lang    = C
+#module_set_locale = False
+
+sudo vi /etc/ansible/hosts
+[give name ]
+  <ip address>
+  
+genarate keygen:
+-----------------
+ssh-keygen
+ssh-copy-id <ip>
+  
