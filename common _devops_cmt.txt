@@ -1,2 +1,8 @@
 chmod 400 <.pem file>
 ssh -i <.pem> ubuntu@<pub ip>
+change host name
+------------
+ubuntu@174.2.2.0 into ubuntu@docker or any specific name u like
+sudo hostnamectl set-hostname <name of the host>
+/bin/bash
+>>>ubuntu@docker
