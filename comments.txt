@@ -3,7 +3,7 @@ creat ansible user
 sudo adduser ansible
 sudo visudo
 >>
-  ansible ALL(ALL:ALL) NOPASSWD: ALL
+  ansible ALL=(ALL:ALL) NOPASSWD: ALL
 sudo vi /etc/ssh/shhd_config
 >>
   passwordaunthenication yes
