@@ -18,7 +18,7 @@ sudo apt install ansible
 
 edit config
 --------------
-sudo vi /etc/ansible/ansible_cfg
+sudo vi /etc/ansible/ansible.cfg
 [defaults]
 
 # some basic default values...
