@@ -4,7 +4,7 @@ sudo adduser ansible
 sudo visudo
 >>
   ansible ALL=(ALL:ALL) NOPASSWD: ALL
-sudo vi /etc/ssh/sshd.config
+sudo vi /etc/ssh/sshd_config
 >>
   passwordaunthenication yes
 sudo service sshd restart
