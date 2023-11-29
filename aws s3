@@ -1,0 +1,12 @@
+install aws s3:
+
+sudo apt install awscli
+aws s3 ls
+>>> once connected to s3 it will show all the s3 buckets 
+--------------------
+aws configure
+>>> it will used to configure the IAM credential info
+cp file to s3 bucket
+aws s3 cp <file> s3://<bucket name>/<folder name>
+--------- 
+aws s3 cp <folder name> s3://<bucket name>/<folder name> --recursive
