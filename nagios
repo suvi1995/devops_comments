@@ -1,0 +1,140 @@
+install lamp
+----------------------------------------------------------
+lamp install
+sudo yum install httpd
+sudo systemctl start httpd
+http://your_server_IP_address
+sudo systemctl enable httpd.service
+sudo yum install mariadb-server
+sudo systemctl start mariadb
+sudo systemctl enable mariadb.service
+sudo mysql_secure_installation
+
+
+
+
+
+sudo yum install php php-mysql
+sudo systemctl restart httpd.service
+sudo chown -R $USER:$USER /var/www/html/
+vi /var/www/html/info.php
+
+<?php phpinfo(); ?>
+
+
+
+
+------------------------------------------
+
+
+nagois install
+sudo yum install gcc glibc glibc-common gd gd-devel make net-snmp openssl-devel xinetd unzip
+sudo useradd nagios
+sudo groupadd nagcmd
+sudo usermod -a -G nagcmd nagios
+cd ~
+curl -L -O https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.1.1.tar.gz
+tar xvf nagios-*.tar.gz
+cd nagios-*
+./configure --with-command-group=nagcmd 
+make all
+sudo make install
+sudo make install-commandmode
+sudo make install-init
+sudo make install-config
+sudo make install-webconf
+sudo usermod -G nagcmd apache
+cd ~
+curl -L -O http://nagios-plugins.org/download/nagios-plugins-2.1.1.tar.gz
+tar xvf nagios-plugins-*.tar.gz
+cd nagios-plugins-*
+./configure --with-nagios-user=nagios --with-nagios-group=nagios --with-openssl
+make
+sudo make install
+cd ~
+curl -L -O http://downloads.sourceforge.net/project/nagios/nrpe-2.x/nrpe-2.15/nrpe-2.15.tar.gz
+tar xvf nrpe-*.tar.gz
+cd nrpe-*
+./configure --enable-command-args --with-nagios-user=nagios --with-nagios-group=nagios --with-ssl=/usr/bin/openssl --with-ssl-lib=/usr/lib/x86_64-linux-gnu
+make all
+sudo make install
+sudo make install-xinetd
+sudo make install-daemon-config
+sudo vi /etc/xinetd.d/nrpe
+
+give nagios pri address
+
+sudo service xinetd restart
+sudo vi /usr/local/nagios/etc/nagios.cfg
+
+#cfg_dir=/usr/local/nagios/etc/servers >>> uncommend 
+sudo mkdir /usr/local/nagios/etc/servers
+sudo vi /usr/local/nagios/etc/objects/commands.cfg
+
+give end of the file
+
+define command{
+        command_name check_nrpe
+        command_line $USER1$/check_nrpe -H $HOSTADDRESS$ -c $ARG1$
+}
+
+sudo htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+
+
+
+
+	
+cd ~
+
+sudo systemctl daemon-reload
+sudo systemctl start nagios.service
+sudo systemctl restart httpd.service
+
+sudo vi /etc/httpd/conf.d/nagios.conf
+sudo systemctl restart nagios.service
+sudo systemctl restart httpd.service
+
+
+
+------------------------------------------------------
+
+define host {
+        use                             linux-server
+        host_name                       controller
+        alias                           My first Apache server
+        address                         172.31.12.239
+        max_check_attempts              5
+        check_period                    24x7
+        notification_interval           30
+        notification_period             24x7
+}
+
+
+define service {
+        use                             generic-service
+        host_name                       controller
+        service_description             PING
+        check_command                   check_ping!100.0,20%!500.0,60%
+}
+
+
+define service {
+        use                             generic-service
+        host_name                       controller
+        service_description             SSH
+        check_command                   check_ssh
+        notifications_enabled           0
+}
+
+
+username: nagiosadmin
+pswd: admin
+
+------------------------------
+host mechine
+ sudo apt-get update
+   23  sudo apt-get install nagios-plugins nagios-nrpe-server -y
+   24  sudo vi /etc/nagios/nrpe.cfg
+   25  df -h /
+   26  sudo vi /etc/nagios/nrpe.cfg
+   27  sudo service nagios-nrpe-server restart
