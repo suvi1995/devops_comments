@@ -3,4 +3,6 @@ jenkins.war
 cd /opt/tomcat/latest/webapps
 sudo wget https://get.jenkins.io/war-stable/2.426.1/jenkins.war
 # if you want to deploy jenkins war file in tomcat server then you need extra storage, because t2.micro storage is not enough to deploy. Better choose different one.
-
+uninstall jenkins:
+-----------------
+sudo apt-get remove --purge jenkins
