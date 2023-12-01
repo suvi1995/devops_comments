@@ -6,3 +6,14 @@ sudo wget https://get.jenkins.io/war-stable/2.426.1/jenkins.war
 uninstall jenkins:
 -----------------
 sudo apt-get remove --purge jenkins
+
+install jenkins
+------------------
+  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+
+  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt install jenkins -y
