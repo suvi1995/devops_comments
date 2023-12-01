@@ -17,3 +17,12 @@ install jenkins
     /etc/apt/sources.list.d/jenkins.list > /dev/null
 
 sudo apt install jenkins -y
+----------------------------
+change jenkins port:
+cd /etc/defult
+sudo vi jenkins
+change port number:9090
+cd /lib/systemd/system
+sudo vi jenkins.service
+change port number:9090
+-------------------------
