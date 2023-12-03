@@ -69,6 +69,27 @@ if u want compare specific commit then we can use this comment
 >> git diff <commit id> <file name>
 stage and specif commit:
 git diff --staged <commit id>
+diiference b/w rwo different commit:
+git diff <commit id 1> <commit id2> file nam
++ >>> added text in the file
+- >>> deleted text in the file
+compare local repo to remote repo:
+git diff master orgin/master
+----------------
+git rm:
+comment used to remove files from ( ws, staing, locel or remote)
+git rm <file name>----> ws 
+git rm -r <file name> (ws and staging)
+git rm --cached <filename> (staging)
+----------------------
+git checkout
+comment used to switching from barnch to brance
+git checout master
+we can used checkout comment to discard unstaged changes in the tracked files of working directory.
+
+ 
+
+
 
 
 
