@@ -111,6 +111,19 @@ won't touch (ws and staging)
 --hard:
 its dangeruos comment. it will delete from everwhere
 git reset --hard <commit id>
+-----------
+git branching:
+every branching idenpented
+git branch <branch name>   ---->create branch
+git checkout -b <branch name>   ----> create and swiching brance
+all branches are isolated
+parallel development will happe without touching the master branch
+-----------------------------
+git mering:
+used to merge the branches
+
+
+
 
 
  
