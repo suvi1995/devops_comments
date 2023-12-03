@@ -46,6 +46,9 @@ git clone < github id >
 ----------------
 git pull
 Git pull command will retrieve all the information on new changes in the content from the remote repository to the local repository by merging with the existing branch. 
+Command: git pull .
+Git pull command’s main function is to fetch as well as merge with the new modifications.
+Repository data is updated in the local repository as well as the remote repository. 
 ---------------
 git annodate
     comment used to to track each line of the file based on the commit information
