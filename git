@@ -121,8 +121,32 @@ parallel development will happe without touching the master branch
 -----------------------------
 git mering:
 used to merge the branches
-
-
+master branch mainted source code
+suppose we want add some features in later but we wrote the code for that. so we decide we push that to some new brach without disturbe the master.
+in later we will merger the childe branch into matster branch using two methode.
+        1. fast-forward merge
+        2. three-way merge
+----------------------
+Git Remote: 
+Git remote command helps you to create, delete, and view connections between remote and local. To view the original file of the copied repository, use the git remote command as
+Command used: $ git remote
+-----------------------
+Git Revert:
+Git revert command is an undo operation that is carried out if we make any mistakes in the commit. It helps to find out how to reverse changes in the commit and the resultant is added as a new commit.
+Git reverse helps in the prevention of losing history from the Git. It is a secure alternative to git reset with concerns about losing work.
+--------------
+git cherry-pick:
+The main function of the cherry-pick command in Git allows to select commits from one branch in a repo and added in the existing branch. 
+This process is helpful to undergo undo process if something goes wrong during an operation.
+Command used: $git cherry-pick <commit id>
+---------------------
+git tree:
+the main purpose of the git Is-tree command is to record the contents of a tree object.
+-----------------------
+ What is the difference between Head, Working Tree, and Index in Git?
+Head: The Head is the parent of the next commit that is created. It is a pointer to the current branch reference and also a pointer to the last commit on the branch.
+Working Tree: The working tree is where your files reside and also you can try changes before committing. It is to record the snapshots of the project.
+Index: The index is a staging area between the working directory and repository. It is used to build a set of changes that you want to commit together.
 
 
 
