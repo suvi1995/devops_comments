@@ -1,0 +1,52 @@
+1. VCS?
+    version control system as a system that keeps all record of changes made on specific project and also helps us to ensure all the developer in a team working on same projwct or not. 
+it gives confidents to the devloper to fix bug and make any changes. if anything goes wrong then previous version will be restore at anytime.
+2. what is git?
+    Git is opensource distributed version control system and source code management (scm) system with an insistence to control small and large projects with speed and efficiency.
+The main objectives of Git:
+  Speed
+  Data integrity
+  Support for distributed 
+  Non-linear workflow. 
+what is github?
+  github is the git hosting remote repository used for software devlopment. It helps us to work on projects and collaborate with other developers at any moment from anywhere.
+git comments?
+git init
+>> first comment in git 
+>> its used to initiate the git repository
+----------
+git add
+git add used to add the untracted files ws(workstation) into staging area
+---------
+git status
+this comment used to view our repository status
+>> about untracted files, traked files, commited files
+-------------
+git log
+this comment used show how many commits are done earlier
+it will give all information about earlier commit what we done
+------------
+git config
+The Git config command is a command used to check the configuration for your git installation and also maintains the git looks and functions.
+Also useful while Installing the email and name of the creator.
+Command used: $git config
+---------
+git commit
+comment  used to commit the files to staging area into local repo
+git commit -m "commit massage"
+--------------
+git push?
+comment used to push the files to local repo into remote repo (our github repostory)
+>> git push
+>> git remote orgin 
+-------------
+git clone
+comment used to clone our perticular remote github repo into local repo (our local machine)
+git clone < github id >
+----------------
+
+
+
+
+
+
