@@ -126,6 +126,19 @@ suppose we want add some features in later but we wrote the code for that. so we
 in later we will merger the childe branch into matster branch using two methode.
         1. fast-forward merge
         2. three-way merge
+1.fast-forward mering:
+  in the fast-forwrad mering , we only do changes in the child branchwithout touching master branch, we mergr into master branch afetr completion of changes, in this methode there is no conflicts b/w brnches
+  git merge <brnch name>
+2.three-way merge:
+in the three-way merge, we do changes or developing the code parallely in the master branch as well as child branch
+ater creation of new branch, if u do some change in the master branch this is called three-way merge.
+merging new branch into master branch , git will craete merge commit.
+in this commit new commit will be added automatically into merge commit.
+there will be conflicts
+this conflicts will be resolved manually
+git merge <branch name>
+delete branch:
+git branch -d <branch name>
 ----------------------
 Git Remote: 
 Git remote command helps you to create, delete, and view connections between remote and local. To view the original file of the copied repository, use the git remote command as
@@ -147,6 +160,98 @@ the main purpose of the git Is-tree command is to record the contents of a tree 
 Head: The Head is the parent of the next commit that is created. It is a pointer to the current branch reference and also a pointer to the last commit on the branch.
 Working Tree: The working tree is where your files reside and also you can try changes before committing. It is to record the snapshots of the project.
 Index: The index is a staging area between the working directory and repository. It is used to build a set of changes that you want to commit together.
+-------------------------
+What happens when the .git directory gets deleted?
+.git directory is an important element in Git that stores all the reports related to the commits, remote repo address also maintains a record of all the commit history which will help you to retrieve any code whenever needed. 
+However, deleting the .git folder won’t delete the files contained in the folder eventually, lose track of your project’s history.  the folder will no longer be included in versioning control. 
+----------------------------
+ What is Git architecture?
+Git is a three-tier architecture and it consists of three layers. They are
+Working directory
+Staging area
+Local repository
+--------------------------
+What is the use of staging area or indexing in Git?
+One can add and remove changes from the staging area. It is considered the real area where git stores the changes.
+--------------------
+ Write down the command used to create an empty Git repository.
+The command used to create an empty Git repository is “git init”. It is used to create a new repository.
+--------------------
+How git status is different from git diff?
+Git Status: Git Status Shows the difference between the working directory and index.
+Git Diff: Git Diff Shows the changes between commits and the working directory.
+---------------------
+How to fix a broken commit?
+A broken comment can be fixed using the command “git commit -amend”.
+---------------------
+List the different Git repository hosting functions.
+Different hosting functions on the git repository are
+GitHub
+GitLab
+SourceForge
+Bitbucket
+Visual studio team
+Beanstalk
+----------------
+What is the main role of command git config?
+The Git config command is a command used to check the configuration for your git installation and also maintains the git looks and functions.
+Also useful while Installing the email and name of the creator.
+Command used: $git config
+--------------
+How do we revert a commit which is already been pushed?
+The steps involved to revert a commit which is already been pushed are
+Move to the Git history
+Right-click on the commit that you want to revert
+Select revert commits
+Ensure the commit the change is reviewed
+Click on revert
+------------
+How to recover a deleted branch in Git?
+Recover a deleted branch in Git:
+On github.com, navigate to the repository of the main page.
+Click pull requests under your repository name.
+Click on “closed” to see the closed pull requests.
+Click the pull request associated with the branch, you want to restore.
+Click “Restore branch” at the bottom of the pull request.
+--------
+Define conflict in Git and how to fix it.
+Git Merge Conflict: It is an event that takes place when Git is unable to resolve differences in code between two commits automatically. If the commits are on different lines or branches then git can merge the changes automatically.
+Example: If two developers X and Y are working on the same file from the remote repository. And each of them wants to make changes. If X makes some changes and pushes the file back to the remote repository from the local repository. Now, when Y tries to push that file after making changes from his end, he is unable to do so, because the file has already changed to the remote repository.
+To avoid this conflict, the Git merge command combines separate branches and resolves any conflicting edits.
+Fixing the conflict: 
+One has to make necessary changes to resolve the conflicted file by opening it.
+After the changes or editing, use the git add a command to stage the new merged content.
+Create a new commit with the help of the git commit command.
+Git will create a new merge commit to finalize the merge.
+----------------------
+Git rebase                                                                                    Git merge
+Logs are linear in Git rebase which means it won’t            Logs are non-linear which means logs will show all the merging history that occurred. 
+show the complete history of merging occurring.  
+It is a multi-stage operation.                                It is a one-step operation. 
+Git rebase is performed when the main branch is a             Git merge is performed when the main branch is a combined branch. 
+particular branch. 
+Command used: $git rebase                                      Command used: $git merge
+------------------------------
+Git                                                            github
+Git is software.                                               GitHub is a service. 
+Git is a Command-Line interface.                               GitHub is a Graphical User interface. 
+Git is Maintained by Linux                                     GitHub is Maintained by Microsoft
+No user management feature.                                    User management feature available. 
+Git is open-sourced license                                    GitHub includes free and pay-for-use features. 
+Git should be installed locally in the system GitHub           GitHub is hosted on the web
+-------------------------------
+git                                                                        svn
+Git is a distributed model                                            SVN is a centralized model
+Difficult to learn.                                                   Easy to learn when compared to Git
+In Git, the .git directory is created by us.                          In SVN, the .svn directory is created for each folder
+Git doesn’t have a good User Interface when compared to SVN           SVN has a good User Interface 
+------------------------
+Git Fetch
+Git fetch command is used to provide information on new changes from the remote repository to the local repository without merging with the existing branch.
+Command: git fetch
+Git fetch command function is to fetch the new modifications.
+Repository data is updated directly keeping the remote repository unmodified.
+
 
 
 
