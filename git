@@ -86,6 +86,32 @@ git checkout
 comment used to switching from barnch to brance
 git checout master
 we can used checkout comment to discard unstaged changes in the tracked files of working directory.
+git checkout --<filename>
+---------------------
+git reset:
+to remove changes from staging area
+undo chnages from repo level
+git reset <file name>
+git reset <mode> <commit id>
+different mode:
+>>--mixed
+>>-- soft
+>> --hard
+--mixed:
+defult mode
+dicard changes from staging area and local repo. it won't touch working directoy
+git reset --mixed <commit id>
+if u want to revert then we can do below steps:
+git add
+git cmmit
+--soft:
+dit reset --soft <commit id>
+discard changes only in local repo
+won't touch (ws and staging)
+--hard:
+its dangeruos comment. it will delete from everwhere
+git reset --hard <commit id>
+
 
  
 
