@@ -44,6 +44,36 @@ git clone
 comment used to clone our perticular remote github repo into local repo (our local machine)
 git clone < github id >
 ----------------
+git pull
+Git pull command will retrieve all the information on new changes in the content from the remote repository to the local repository by merging with the existing branch. 
+---------------
+git annodate
+    comment used to to track each line of the file based on the commit information
+>> git annodate basic.py
+>>> git annodate -L 1, 3 basic.py (1>> start,  3>> end)
+-------------
+git diff
+git diifenec comment used to compare files in differen area
+like work station to staing area
+stating area to local repo
+ws to stating:
+>> git diff <file name>
+ws to local:
+>> git diff HEAD <filename>
+stage to last commit :
+>> git diff --staged < file name>
+--------------
+git log --oneline
+used to get commit id 
+if u want compare specific commit then we can use this comment
+>> git diff <commit id> <file name>
+stage and specif commit:
+git diff --staged <commit id>
+
+
+
+
+
 
 
 
