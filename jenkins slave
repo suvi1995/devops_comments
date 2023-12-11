@@ -1,0 +1,9 @@
+sudo mkdir jenkins
+ sudo useradd -d /var/lib/jenkins jenkins
+cd /var/lib/
+ssh-keygen
+sudo mkdir /var/lib/jenkins/.ssh
+sudo vi /var/lib/jenkins/.ssh/authorized_keys
+sudo cat  /home/ubuntu/.ssh/id_rsa.pub
+sudo vi /var/lib/jenkins/.ssh/authorized_keys
+sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh/
