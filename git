@@ -120,7 +120,7 @@ every branching idenpented
 git branch <branch name>   ---->create branch
 git checkout -b <branch name>   ----> create and swiching brance
 all branches are isolated
-parallel development will happe without touching the master branch
+parallel development will happen without touching the master branch
 -----------------------------
 git mering:
 used to merge the branches
