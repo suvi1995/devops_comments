@@ -1,2 +1,56 @@
 what is maven?
 is a opensource tool devloped by apache group
+its written by java
+its a build tool
+----------------------
+what does maven help with?
+apache maven helps with manage process all the process, such as building, documentation, releasing and distribution in project management.
+whenever start maven project it will automatically create pom.xml
+in pom.xml have depencies and plugins
+in depencies is automatically download libraries from third party and automatically upgrade if we can change only version number.
+plugins having configuration about project
+Maven makes it easy for the developer to build a project in different environments, without worrying about the dependencies, processes, etc.
+---------------------------------
+What are the different elements that Maven takes care of?
+Builds
+Dependencies
+Reports 
+Distribution
+Releases
+Mailing list
+-----------------------------------
+What is POM?
+Project Object Model (POM) refers to the XML files with all the information regarding project and configuration details.
+It has the description of the project, information regarding the versioning and configuration management of the project.
+The XML file is in the project home directory. When we tend to execute a task, Maven searches for the POM in the current directory.
+--------------------------------------
+What all is included in the POM?
+POM contains the following configurations:
+Dependencies
+Developers and contributors
+Plugins
+Plugin configuration
+Resources 
+------------------------
+ What are the minimum required elements for POM? 
+The minimum required elements for POM are:
+project root
+modelVersion – should be 4.0.0
+groupId – project’s group id
+artifactId – artifact (project) id
+version – version of the artifact
+------------------------------------
+What are the steps to install Maven on Windows?
+To install Maven on Windows, observe the following steps:
+Download Maven first, and then extract it.
+In the environment variable, add JAVA_HOME, and MAVEN_HOME.
+Then, add the environment path in the Maven variable.
+Lastly, verify the Maven installation by checking its version. The command mvn -version will display the version installed in the system.
+--------------------------------
+What is meant by the term ‘Build Tool’?
+A build tool is essential for the process of building. It is needed for the following procedures:
+Generating source code.
+Generating documentation from the source code.
+Compiling of source code.
+Packaging of the compiled codes into JAR files.
+Installing the packaged code in a local repository, server, or central repository.
