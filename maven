@@ -4,7 +4,7 @@ its written by java
 its a build tool
 ----------------------
 what does maven help with?
-apache maven helps with manage process all the process, such as building, documentation, releasing and distribution in project management.
+apache maven helps with manage all the process, such as building, documentation, releasing and distribution in project management.
 whenever start maven project it will automatically create pom.xml
 in pom.xml have depencies and plugins
 in depencies is automatically download libraries from third party and automatically upgrade if we can change only version number.
@@ -60,3 +60,66 @@ primary step to install java
 then install maven
 like sudo apt install maven -y
 then check mvn version
+----------------------------------
+dependencies:
+ <dependencies>
+    <dependency>
+      <groupId>junit</groupId>------company (organisation name)
+      <artifactId>junit</artifactId>-----(project name)
+      <version>4.12</version> ---(version defult)
+      <scope>test</scope>---(until run)
+    </dependency>
+  </dependencies>
+--------------------
+build life cycle:
+validate--- validate the code
+compile -- compile the code
+test
+package
+integration test
+verify
+install-- install in local repo
+deploy -- install in remote rep's to use by other projects 
+-------------------------------
+ Why are Maven Plugins used?
+Maven Plugins are used to: 
+Create a JAR file.
+Create a WAR file.
+Compile code files.
+Unit testing of code.
+Create project documentation.
+Create project reports.
+-------------------------------
+What is Maven Build Lifecycle?
+Maven lifecycle is a collection of steps that are to be followed, to build a project. There are three built-in build lifecycles:
+Default: Handles project deployment.
+Clean: Handles project cleaning.
+Site: Handles the creation of the project site’s documentation.
+----------------------
+How does Maven Architecture work?
+Maven architecture works in three steps, which are as follows:
+The first step is to read the pom.xml file.
+Then, it downloads the dependencies defined in pom.xml into the local repository from the central repository.
+Lastly, it creates and generates a report according to the requirements, and executes life-cycles, phases, goals, plugins, etc.
+--------------------------
+ What is a Maven Repository?
+Maven repositories refer to the directories of packaged JAR files that contain metadata. The metadata refers to the POM files relevant to each project. 
+This metadata is what allows Maven to download dependencies.
+There are three types of repositories:
+Local Repository
+Remote Repository
+Central Repository
+--------------------------------
+What are the different types of Maven Repositories?
+There are three types of Maven repositories:
+
+1. Local Repository: 
+Local repository refers to the machine of the developer where all the project material is saved.
+The local repository contains all the dependency jars.
+2. Remote Repository:
+The remote repository refers to the repository present on a server that is used when Maven needs to download dependencies.
+Whenever anything is required from the remote repository, it is first downloaded to the local repository, and then it is used.
+3. Central Repository:
+Central repository refers to the Maven community that comes into action when there is a need for dependencies, and those dependencies cannot be found in the local repository.
+Maven downloads the dependencies from here in the local repository whenever needed.
+
