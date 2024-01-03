@@ -54,3 +54,9 @@ Generating documentation from the source code.
 Compiling of source code.
 Packaging of the compiled codes into JAR files.
 Installing the packaged code in a local repository, server, or central repository.
+-----------------------------------------------
+What are the steps to install Maven on Ubuntu?
+primary step to install java
+then install maven
+like sudo apt install maven -y
+then check mvn version
