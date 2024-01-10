@@ -1,0 +1,22 @@
+docker comments
+sudo apt install docker.io
+sudo docker info
+if you want saw client and server info without sudo then
+sudo usermod -aG docker ubuntu
+then switch into root system
+sudo su -
+su - ubuntu >> exit
+docker info
+-------------
+system
+  df          Show docker disk usage
+  TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+  Images          0         0         0B        0B
+  Containers      0         0         0B        0B
+  Local Volumes   0         0         0B        0B
+  Build Cache     0         0         0B        0B
+  ---------------------------------------------
+  events      Get real time events from the server
+  info        Display system-wide information
+  prune       Remove unused data
+  
