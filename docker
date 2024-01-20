@@ -61,4 +61,14 @@ system
   unpause     Unpause all processes within one or more containers
   update      Update configuration of one or more containers
   wait        Block until one or more containers stop, then print their exit codes
+docker run -d --name <name> <image name> ----> run a container
+docker exec -it <container name> /bin/bash ---> into container
+ exp:
+docker exec -it web1 /bin/bash
+docker cp <filename> <containerid>:foler ---copy file from one container to another container
+docker cp <containername>:/tmp/<filename> . 
+
+
+
+
   
