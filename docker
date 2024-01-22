@@ -63,6 +63,15 @@ system
   wait        Block until one or more containers stop, then print their exit codes
 docker run -d --name <name> <image name> ----> run a container
 docker exec -it <container name> /bin/bash ---> into container
+docker run -d -it --name <container new name> <image name>
+exp:
+docker run -d -it --name myapp <imgname>
+docker run -d -it --name myapp -p 82:80 <image name>
+                                 (prefix:suffix)  suffix can be lisner port number /prefix can be anything
+if u want see port id for particular image
+docker inspect <imgname>
+docker history or docker histor <container name>
+
  exp:
 docker exec -it web1 /bin/bash
 docker cp <filename> <containerid>:foler ---copy file from one container to another container
@@ -74,6 +83,7 @@ if u wnat delete all space
 docker system purne
 if u want to search images 
 docker search ubuntu >>>(image name)
+
 
 
  
