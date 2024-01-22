@@ -71,7 +71,6 @@ docker run -d -it --name myapp -p 82:80 <image name>
 if u want see port id for particular image
 docker inspect <imgname>
 docker history or docker histor <container name>
-
  exp:
 docker exec -it web1 /bin/bash
 docker cp <filename> <containerid>:foler ---copy file from one container to another container
@@ -92,8 +91,15 @@ backup and retsore the docker images one host to another host without internet
 if u want do delete the container, first u should stop the container
 docker rm <container name>
 docker rmi <imagename>
-
-
+at a time delete all images
+docker rmi $(sudo docker images -a -q)
+create image from container:
+ install cmt:
+ apt-get install wget
+ docker commit <container id> <img name>:<tagname>
+docker commit bdgu56497hk webapp:2.1
+push to dockerhub:
+docker push <imgname>
   
 docker images:
 docker images are just a templates of a docker containers and it is very similer to snapshot images 
