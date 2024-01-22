@@ -67,6 +67,20 @@ docker exec -it <container name> /bin/bash ---> into container
 docker exec -it web1 /bin/bash
 docker cp <filename> <containerid>:foler ---copy file from one container to another container
 docker cp <containername>:/tmp/<filename> . 
+docker stats >>> about usage
+if u want to see inditual 
+docker stats <container name>
+if u wnat delete all space
+docker system purne
+if u want to search images 
+docker search ubuntu >>>(image name)
+
+
+ 
+docker images:
+docker images are just a templates of a docker containers and it is very similer to snapshot images 
+with smaller in size. Singe docker 
+
 
 
 
