@@ -83,10 +83,18 @@ if u wnat delete all space
 docker system purne
 if u want to search images 
 docker search ubuntu >>>(image name)
+if save img in local
+docker save <imgid> > myapp.tar   u can only save aa tar file
+scp <filename.tar> ubuntu@174.2.3.22:/home/foldername >>>to another host
+in another host:
+docker load -i <filename.tar>
+backup and retsore the docker images one host to another host without internet
+if u want do delete the container, first u should stop the container
+docker rm <container name>
+docker rmi <imagename>
 
 
-
- 
+  
 docker images:
 docker images are just a templates of a docker containers and it is very similer to snapshot images 
 with smaller in size. Singe docker 
