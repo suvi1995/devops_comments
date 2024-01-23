@@ -22,4 +22,9 @@ dockerfile
   WORKDIR>> used to set the working directory
   ENV  >>>to set enviornment variable.  we will see that varible name after
   ARG
+--------------------------------
+docker build .
+docker build -t myweb:latest . 
+docker run -d -it --name web1 -p 80:80 <imgname>:latest
+
     
