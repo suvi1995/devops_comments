@@ -7,3 +7,24 @@ sudo vi /var/lib/jenkins/.ssh/authorized_keys
 sudo cat  /home/ubuntu/.ssh/id_rsa.pub
 sudo vi /var/lib/jenkins/.ssh/authorized_keys
 sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh/
+
+
+master
+install 
+java 
+jenkins
+vi /etc/ssh/sshd_config
+pub auth yes
+uncomment authorized
+
+
+slave
+install java
+vi /etc/ssh/sshd_config
+pub auth yes
+uncomment authorized
+
+
+
+
+
