@@ -8,21 +8,54 @@ sudo cat  /home/ubuntu/.ssh/id_rsa.pub
 sudo vi /var/lib/jenkins/.ssh/authorized_keys
 sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh/
 
-
+----------------------------------------
 master
+-------------
 install 
 java 
 jenkins
 vi /etc/ssh/sshd_config
 pub auth yes
 uncomment authorized
+sudo apt update
+ssh-keygen
+save pub in agent mechine
+
+----------------
+    3  sudo apt install openjdk-11-jdk
+    4  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc     https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    5  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list > /dev/null
+    6  sudo apt install jenkins -y
+    7  sudo apt update
+    8  sudo apt install jenkins -y
+    9  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   10  sudo vi /etc/ssh/sshd_config
+   11  sudo service sshd restart
+   12  ssh-keygen
+   13  sudo cat /home/ubuntu/.ssh/id_rsa.pub
+   14  pwd
+   15  sudo cat  /home/ubuntu/.ssh/id_rsa
+--------------------------
 
 
 slave
+----------------------
 install java
 vi /etc/ssh/sshd_config
 pub auth yes
 uncomment authorized
+cd .ssh
+vi authorsedkeys
+save pub key from master
+-----------------------------
+credential 
+username wuth psw
+id:jenkins-agent
+des:jenkins-agent
+username: ubuntu
+save pri from master
+---------------------
+
 
 
 
