@@ -1,3 +1,6 @@
+in security group to allow all traffic then only aallow the website, otherwise it does not work 
+
+
 sudo apt update
 sudo apt install nginx -y
 check in browser
