@@ -1,0 +1,27 @@
+ sudo apt update
+    3  wget https://github.com/prometheus/prometheus/releases/download/v2.28.1/prometheus-2.28.1.linux-amd64.tar.gz
+    4  tar -xvf prometheus-2.28.1.linux-amd64.tar.gz
+    5  ls
+    6  mv prometheus-2.28.1.linux-amd64 prometheus-files
+    7  sudo useradd --no-create-home --shell /bin/false prometheus
+    8  sudo mkdir /etc/prometheus
+    9  sudo mkdir /var/lib/prometheus
+   10  sudo groupadd prometheus
+   13  sudo chown prometheus:prometheuse /etc/prometheus
+   14  sudo chown prometheus:prometheus /var/lib/prometheus
+   15  cp prometheus-files/prometheus /usr/local/bin/
+   16  sudo cp prometheus-files/prometheus /usr/local/bin/
+   17  sudo cp prometheus-files/promtool /usr/local/bin/
+   18  sudo chown prome:prome /usr/local/bin/prometheus
+   19  sudo chown prome:prome /usr/local/bin/promtool
+   20  sudo cp -r prometheus-files/consoles /etc/prometheus
+   23  sudo cp -r prometheus-files/console_libraries /etc/prometheus
+   24  sudo chown -R prome:prome /etc/prometheus/consoles
+   25  sudo chown -R prome:prome /etc/prometheus/console_libraries
+   26  vim /etc/prometheus/prometheus.yml
+   27  sudo vim /etc/prometheus/prometheus.yml
+   28  sudo nano /etc/systemd/system/prometheus.service
+   29  sudo systemctl daemon-reload
+   31  sudo systemctl start prometheus
+   32  sudo systemctl enable prometheus
+   33  sudo systemctl status prometheus
