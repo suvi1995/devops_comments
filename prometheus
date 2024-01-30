@@ -24,4 +24,33 @@
    29  sudo systemctl daemon-reload
    31  sudo systemctl start prometheus
    32  sudo systemctl enable prometheus
+=============================================
+yml:
+global:
+ scrape_interval: 15s
+scrape_configs:
+ - job_name: 'prometheus'
+ scrape_interval: 5s
+ static_configs:
+ - targets: ['54.226.119.119:9090']
+==============================
+prometheus.service
+
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+[Service]
+User=prome
+Group=prome
+Type=simple
+ExecStart=/usr/local/bin/prometheus \
+ --config.file /etc/prometheus/prometheus.yml \
+ --storage.tsdb.path /var/lib/prometheus/ \
+ --storage.tsdb.retention.time=7d \
+ --storage.tsdb.retention.size=8GB \
+ --web.console.templates=/etc/prometheus/consoles \
+ --web.console.libraries=/etc/prometheus/console_libraries
+[Install]
+WantedBY=multi-user.target
    33  sudo systemctl status prometheus
