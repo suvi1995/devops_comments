@@ -1,0 +1,8 @@
+sudo apt update
+sudo wget -q -O - https://packages.grafana.com/gpg.key > grafana.key | sudo apt-key add -
+sudo add-apt-repository "deb https://packages.grafana.com/odd/deb stable main"
+sudo apt update
+sudo apt-get -y install grafana
+sudo systemctl start grafana-server.service
+sudo systemctl enable grafana-server.service
+ruuning server 3000
