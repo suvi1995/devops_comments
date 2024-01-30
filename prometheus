@@ -32,6 +32,10 @@ scrape_configs:
    scrape_interval: 5s
    static_configs:
      - targets: ['18.212.10.29:9090']
+ - job_name: 'prometheus_server'
+   scrape_interval: 5s
+   static_configs:
+     - targets: ['172.31.85.217:9100']
 ==============================
 prometheus.service
 [Unit]
