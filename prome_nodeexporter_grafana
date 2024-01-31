@@ -1,0 +1,54 @@
+PROMETHEUS INSTALLATION STEPS:
+---------------------------------------
+    sudo apt update
+    3  sudo useradd --no-create-home --shell /bin/false prometheus
+    4  sudo mkdir /etc/prometheus
+    5  sudo mkdir /var/lib/prometheus
+    6  sudo chown prometheus:prometheus /var/lib/prometheus
+    7  cd /tmp/
+    8  wget https://github.com/prometheus/prometheus/releases/download/v2.46.0/prometheus-2.46.0.linux-amd64.tar.gz
+    9  tar -xvf prometheus-2.46.0.linux-amd64.tar.gz
+   10  cd prometheus-2.46.0.linux-amd64
+   11  sudo mv console* /etc/prometheus
+   12  sudo mv prometheus.yml /etc/prometheus
+   13  sudo chown -R prometheus:prometheus /etc/prometheus
+   14  sudo mv prometheus /usr/local/bin/
+   15  sudo chown prometheus:prometheus /usr/local/bin/prometheus
+   16  sudo nano /etc/prometheus/prometheus.yml
+   17  sudo nano /etc/systemd/system/prometheus.service
+   18  cd ..
+   19  cd
+   20  sudo systemctl daemon-reload
+   21  sudo systemctl start prometheus
+   22  sudo systemctl enable prometheus
+   23  sudo systemctl status prometheus
+   24  sudo ufw allow 9090/tcp
+   prometheus works port number:9090
+   =======================================================
+   NODE_EXPORTER INSTALLATION STEPS:
+   --------------------------
+   wget https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
+   27  sudo tar xvfz node_exporter-*.*-amd64.tar.gz
+   28  sudo mv node_exporter-*.*-amd64/node_exporter /usr/local/bin/
+   29  sudo useradd -rs /bin/false node_exporter
+   30  sudo nano /etc/systemd/system/node_exporter.service
+   31  cd
+   32  sudo systemctl daemon-reload
+   33  sudo systemctl start node_exporter
+   34  sudo systemctl enable node_exporter
+   35  sudo systemctl status node_exporter
+   36  sudo nano /etc/prometheus/prometheus.yml
+   37  sudo systemctl restart prometheus
+   node_exporter works on: 9100
+   ==========================================
+   GRAFANA INSTALLATION STEPS:
+   ----------------------
+    wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
+   41  sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+   42  sudo apt update
+   43  sudo apt install grafana
+   44  sudo systemctl start grafana-server
+   45  sudo systemctl status grafana-server
+   46  sudo systemctl enable grafana-server
+   grafana works on :3000
+   
