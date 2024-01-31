@@ -51,4 +51,10 @@ PROMETHEUS INSTALLATION STEPS:
    45  sudo systemctl status grafana-server
    46  sudo systemctl enable grafana-server
    grafana works on :3000
+once install grafana then add prometheus.
+connection >> datesource >> prometheus >> add prometheus server ip >> test
+dashboard >> import dashport >> 14513
+jenkins >> 9964
+in jenkins install plugins >> prometheus metrics
+
    
