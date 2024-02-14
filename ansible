@@ -1,0 +1,20 @@
+what is ansible?
+ansible is open source and automation tool.
+usinng ansible lets you automate virtually any task
+common use cases for Ansible: 
+  Eliminate repetition and simplify workflows
+  Manage and maintain system configuration
+  Continuously deploy complex software
+  Perform zero-downtime rolling updates
+ansible playbook and ad hoc comments
+ad hoc comments:
+quick and easy
+automate single task
+non-repetitive task
+use case:
+rebooting server:
+ansible all -a '/sbin/rebool'
+managing files:
+ansible all -m copy -a "src=/etc/host dest=/tmp/host"
+managing packages etc:
+ansible webserver -m apt -a "name=apache2 state=present"
