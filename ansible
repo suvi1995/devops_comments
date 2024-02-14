@@ -18,3 +18,18 @@ managing files:
 ansible all -m copy -a "src=/etc/host dest=/tmp/host"
 managing packages etc:
 ansible webserver -m apt -a "name=apache2 state=present"
+playbook:
+Ansible Playbooks offer a repeatable, reusable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, 
+write a playbook and put it under source control.
+simple configuration
+Repetitive 
+Reusable
+use-case:
+orchestrate plays on multiple machines
+Why use Ansible?
+One of the most significant advantages of Ansible is that it is free to use by everyone.
+It does not need any special system administrator skills to install and use Ansible, and the official documentation is very comprehensive.
+Its modularity regarding plugins, modules, inventories, and playbooks make Ansible the perfect companion to orchestrate large environments.
+Ansible is very lightweight and consistent, and no constraints regarding the operating system or underlying hardware are present.
+It is also very secure due to its agentless capabilities and due to the use of OpenSSH security features.
+Another advantage that encourages the adoption of Ansible is its smooth learning curve determined by the comprehensive documentation and easy to learn structure and configuration.
