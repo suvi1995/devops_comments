@@ -33,3 +33,12 @@ Its modularity regarding plugins, modules, inventories, and playbooks make Ansib
 Ansible is very lightweight and consistent, and no constraints regarding the operating system or underlying hardware are present.
 It is also very secure due to its agentless capabilities and due to the use of OpenSSH security features.
 Another advantage that encourages the adoption of Ansible is its smooth learning curve determined by the comprehensive documentation and easy to learn structure and configuration.
+
+2. What Is Inventory ?
+In Ansible, an inventory is a file with specifying the information of hosts that going to be managed. It contains information such as hostnames, IP addresses, and groups of organization. The inventory can be either static or dynamic, and it may be with inclusion of variables by specific host details. It’s a key 
+component for targeting and managing nodes infrastructure in Ansible. A sample inventory file is given below.
+
+
+
+
+
