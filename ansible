@@ -33,10 +33,45 @@ Its modularity regarding plugins, modules, inventories, and playbooks make Ansib
 Ansible is very lightweight and consistent, and no constraints regarding the operating system or underlying hardware are present.
 It is also very secure due to its agentless capabilities and due to the use of OpenSSH security features.
 Another advantage that encourages the adoption of Ansible is its smooth learning curve determined by the comprehensive documentation and easy to learn structure and configuration.
-
 2. What Is Inventory ?
-In Ansible, an inventory is a file with specifying the information of hosts that going to be managed. It contains information such as hostnames, IP addresses, and groups of organization. The inventory can be either static or dynamic, and it may be with inclusion of variables by specific host details. It’s a key 
+In Ansible, an inventory is a file with specifying the information of hosts that going to be managed. It contains information such as hostnames, IP addresses, and groups of organization. 
+The inventory can be either static or dynamic, and it may be with inclusion of variables by specific host details. It’s a key 
 component for targeting and managing nodes infrastructure in Ansible. A sample inventory file is given below.
+[name of the host]
+either ip address or host name 
+4. What Are The Features Of Ansible ?
+Ansible comes with several features that make it powerful and popular automation tool. A few of the key features are listed here:
+
+Agentless: Ansible does not require any agent installation on the managed nodes. It communicates with the nodes in the network using SSH simplifying deployment and reduces complexity.
+Declarative Language: Ansible uses a simple human-readable YAML syntax to specify the desired state of the system making it easy to write and understand automation scripts.
+Idempotent Operations: Ansible ensures for the achievement of desired state i.e., running a playbook multiple times has the same effect as running it once. This prevents from unintended changes ensuring consistency.
+Playbooks: Automation scripts in Ansible are known as playbooks. Playbooks are written in YAML by defining a set of tasks that to be executed on remotely specifying in the hosts section.
+Modules: Modules are used in ansible to perform specific tasks on managed nodes.They are 2 types of modules as built-in modules ( that are already created and comes with ansible ) and custom modules that are created by users.
+Inventory Management: Ansible uses an inventory file to specify the hosts information such as IP address or domainname, user details etc.. on which the automation tasks have to be executed. The inventory file can be either static or dynamic include host groups.
+-----------------------
+Ansible Galaxy:
+features sharing and downloading the ansible roles
+
+modules:
+task executional unts
+
+plugins:
+
+enhancing Ansible’s functionality by extending its capabilities
+
+ansible task:
+inditual task unit within playbook coming with defined action that to be perfomed on remote host
+
+ansible stand out from other configuration management:
+Ansible’s agentless architecture and its simplicity in use (YAML syntax), and ease of setup contribute to its
+standout features among other Configuration Management tools. 
+
+9.Briefly Explain Ansible’s Architecture Through Outlining Its Different Components.
+The control node communicates with managed nodes through SSH protocol executing tasks defined in playbooks. Ansible consists of a control node, managed nodes,
+inventory, modules, and plugins.
+
+
+
 
 
 
