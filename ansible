@@ -70,6 +70,15 @@ standout features among other Configuration Management tools.
 The control node communicates with managed nodes through SSH protocol executing tasks defined in playbooks. Ansible consists of a control node, managed nodes,
 inventory, modules, and plugins.
 
+What Is The Foundational Programming Language Of Ansible?
+python is the foundational programming language of ansible 
+python's wide range of adoption provided good community support, making ansible an effective and flexiable automation tool.
+
+What are handlers in Ansible, and how are they used in playbooks?
+Handlers in Ansible are tasks that are triggered by other tasks, usually used to respond for the changes that require start , stop , reload or restart the service actions. 
+They are defined in the playbook and executed as per need.
+  
+
 
 
 
