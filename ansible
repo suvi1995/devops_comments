@@ -19,7 +19,8 @@ ansible all -m copy -a "src=/etc/host dest=/tmp/host"
 managing packages etc:
 ansible webserver -m apt -a "name=apache2 state=present"
 playbook:
-Ansible Playbooks offer a repeatable, reusable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, 
+Ansible Playbooks offer a repeatable, reusable, simple configuration management and multi-machine deployment system, one that is well suited to
+deploying complex applications. If you need to execute a task with Ansible more than once, 
 write a playbook and put it under source control.
 simple configuration
 Repetitive 
