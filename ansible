@@ -47,14 +47,17 @@ Agentless: Ansible does not require any agent installation on the managed nodes.
 Declarative Language: Ansible uses a simple human-readable YAML syntax to specify the desired state of the system making it easy to write and understand automation scripts.
 Idempotent Operations: Ansible ensures for the achievement of desired state i.e., running a playbook multiple times has the same effect as running it once. This prevents from unintended changes ensuring consistency.
 Playbooks: Automation scripts in Ansible are known as playbooks. Playbooks are written in YAML by defining a set of tasks that to be executed on remotely specifying in the hosts section.
-Modules: Modules are used in ansible to perform specific tasks on managed nodes.They are 2 types of modules as built-in modules ( that are already created and comes with ansible ) and custom modules that are created by users.
+Modules: Modules are used in ansible to perform specific tasks on managed nodes.They are 2 types of modules as built-in modules 
+( that are already created and comes with ansible ) and custom modules that are created by users.
 Inventory Management: Ansible uses an inventory file to specify the hosts information such as IP address or domainname, user details etc.. on which the automation tasks have to be executed. The inventory file can be either static or dynamic include host groups.
 -----------------------
 Ansible Galaxy:
 features sharing and downloading the ansible roles
 
 modules:
+Modules are used in ansible to perform specific tasks on managed nodes.
 Modules (also referred to as “task plugins” or “library plugins”) are discrete units of code that can be used from the command line or in a playbook task.
+
 task executional unts
 
 plugins:
@@ -79,6 +82,12 @@ python's wide range of adoption provided good community support, making ansible 
 What are handlers in Ansible, and how are they used in playbooks?
 Handlers in Ansible are tasks that are triggered by other tasks, usually used to respond for the changes that require start , stop , reload or restart the service actions. 
 They are defined in the playbook and executed as per need.
+
+What is configuration management?
+Configuration Management (CM) is a practice that we should follow to keep track of all updates that are going into the system over
+a period of time. This also helps in a situation where a major bug has been introduced to the system due to some new changes that need 
+to be fixed with minimum downtime. CM keeps track of all updates that are needed in a system and ensures that the current 
+design and build state of the system are up-to-date and properly functional.
   
 
 
