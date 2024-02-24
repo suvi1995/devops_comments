@@ -54,6 +54,7 @@ Ansible Galaxy:
 features sharing and downloading the ansible roles
 
 modules:
+Modules (also referred to as “task plugins” or “library plugins”) are discrete units of code that can be used from the command line or in a playbook task.
 task executional unts
 
 plugins:
