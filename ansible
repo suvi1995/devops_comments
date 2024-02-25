@@ -128,7 +128,7 @@ Play: A task executed from start to finish or the execution of a playbook is cal
 Facts: Facts are global variables that store details about the system such as network interfaces or operating systems.
 Handlers: Handlers are used to trigger the status of a service such as restarting or stopping a service.
 
-
+ansible playbook:
 Ansible Playbooks offer a repeatable, reusable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, write a playbook and put it under source control.
 
 
