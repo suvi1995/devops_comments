@@ -84,12 +84,31 @@ Handlers in Ansible are tasks that are triggered by other tasks, usually used to
 They are defined in the playbook and executed as per need.
 
 What is configuration management?
-Configuration Management (CM) is a practice that we should follow to keep track of all updates that are going into the system over
-a period of time. This also helps in a situation where a major bug has been introduced to the system due to some new changes that need 
-to be fixed with minimum downtime. CM keeps track of all updates that are needed in a system and ensures that the current 
-design and build state of the system are up-to-date and properly functional.
-  
+Configuration Management is the process of maintaining systems, such as computer hardware and software, in a desired state. Configuration Management (CM) is also a method of ensuring that systems perform in a manner consistent with expectations over time.
+Why is Configuration Management important?
+Configuration Management helps prevent undocumented changes from working their way into the environment. By doing so, CM can help prevent performance issues, system inconsistencies, or compliance issues that can lead to regulatory fines and penalties. Over time, these undocumented changes can lead to system downtime, instability, or failure.
 
+without CM, we have to do all the process manually. its too complex in lager systems.
+
+A Configuration management system allows the enterprise to define settings in a consistent manner, then to build and maintain them according to the established baselines. A configuration management plan should include a number of tools that:
+
+Enable classification and management of systems in groups
+Make centralized modifications to baseline configurations
+Push changes automatically to all affected systems to automate updates and patching
+Identify problem configurations that are underperforming or non-compliant
+Automate prioritization of actions needed to remediate issues•
+Apply remediation when needed.
+As organizations increasingly adopt a microservices architecture composed of many code segments of various size connected by APIs, the need for a consistent configuration management process becomes even more apparent, where each service utilizes metadata that encodes specs for resource allocation, secrets like passwords, and endpoints that define connections to other services for registration and initialization.
+
+Through the use of these tools, a configuration management plan provides a ‘single version of the truth’ for the desired state of systems across the organization by giving visibility to any configuration modifications, enabling audit trails and tracking of every change made to the system.
+What are Benefits of Configuration Management?
+Utilizing a Configuration Management system helps avoid problems that occur when hardware and software systems are improperly configured. Simply tracking changes can help avoid expensive remediation projects down the road. CM is insurance you pay for today so you can prevent issues tomorrow. For example, Configuration Management helps ensure the development, test, and production environments are the same, so that deployed applications will behave in the manner that is expected of them. 
+What are the requirements for the Ansible server?
+If you are a Windows user, then you need to have a virtual machine on which Linux should be installed. Ansible Server requires Python 2.6 version or higher. If these requirements are fulfilled, then you can proceed with ease.
+What are Ansible tasks?
+The task is a unit action in Ansible. It breaks a configuration policy into smaller files or blocks of code. These blocks can be useful in automating a process, for example, to install a package or update software:
+Which protocol does Ansible use to communicate with Linux and Windows?
+In Linux systems, the Secure Shell (SSH) protocol is employed, while Windows systems utilize the Windows Remote Management (WinRM) protocol.
 
 
 
