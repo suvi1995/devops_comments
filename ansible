@@ -115,6 +115,22 @@ Command: ansible host -m netscaler -a "nsc_host=nsc.example.com user=apiuser pas
  What is a YAML file and how do we use it in Ansible?
 YAML files are like any formatted text file, with a few sets of rules similar to those of JSON or XML. Ansible uses this syntax for playbooks as it is more readable than other formats.
 
+Explain a few of the basic terminologies or concepts in Ansible
+A few of the basic terms that are commonly used while operating on Ansible are as follows:
+
+Controller Machine: The controller machine is responsible for provisioning servers that are being managed. It is the machine where Ansible is installed.
+Inventory: An inventory is an initialization file that has details about the different servers that you are managing.
+Playbook: It is a code file written in the YAML format. A playbook basically contains the tasks that need to be executed or automated.
+Task: Each task represents a single procedure that needs to be executed, e.g., installing a library.
+Module: A module is a set of tasks that can be executed. Ansible has hundreds of built-in modules, but you can also create custom ones.
+Role: An Ansible role is a predefined way of organizing playbooks and other files to facilitate sharing and reusing portions of provisioning.
+Play: A task executed from start to finish or the execution of a playbook is called a play.
+Facts: Facts are global variables that store details about the system such as network interfaces or operating systems.
+Handlers: Handlers are used to trigger the status of a service such as restarting or stopping a service.
+
+
+Ansible Playbooks offer a repeatable, reusable, simple configuration management and multi-machine deployment system, one that is well suited to deploying complex applications. If you need to execute a task with Ansible more than once, write a playbook and put it under source control.
+
 
 
 
