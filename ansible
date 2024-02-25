@@ -109,6 +109,11 @@ What are Ansible tasks?
 The task is a unit action in Ansible. It breaks a configuration policy into smaller files or blocks of code. These blocks can be useful in automating a process, for example, to install a package or update software:
 Which protocol does Ansible use to communicate with Linux and Windows?
 In Linux systems, the Secure Shell (SSH) protocol is employed, while Windows systems utilize the Windows Remote Management (WinRM) protocol.
+What are ad hoc commands? Give an example.
+Ad hoc commands are simple, one-line commands used to perform a certain task. You can think of ad hoc commands as an alternative to writing playbooks. An example of an ad hoc command is as follows:
+Command: ansible host -m netscaler -a "nsc_host=nsc.example.com user=apiuser password=apipass"
+ What is a YAML file and how do we use it in Ansible?
+YAML files are like any formatted text file, with a few sets of rules similar to those of JSON or XML. Ansible uses this syntax for playbooks as it is more readable than other formats.
 
 
 
