@@ -68,19 +68,29 @@ TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
   unpause     Unpause all processes within one or more containers
   update      Update configuration of one or more containers
   wait        Block until one or more containers stop, then print their exit codes
-docker run -d --name <name> <image name> ----> run a container
+docker run -d --name <name> <image name> ----> run a container -----> it only for application
+docker run -d -it --name web1 alpine /bin/bash ----> to run a container ----> it for os  
 docker exec -it <container name> /bin/bash ---> into container
 docker run -d -it --name <container new name> <image name>
 exp:
 docker run -d -it --name myapp <imgname>
 docker run -d -it --name myapp -p 82:80 <image name>
                                  (prefix:suffix)  suffix can be lisner port number /prefix can be anything
+docker exec <container name> mkdir /tmp/foldername
+exp:
+docker exec web1 mkdir /tmp/t1
+this comment used to perform task directly without into containers 
+docker exec web1 ls /tmp/  to see list
+
 if u want see port id for particular image
 docker inspect <imgname>
 docker history or docker histor <container name>
  exp:
 docker exec -it web1 /bin/bash
+local to container:
 docker cp <filename> <containerid>:foler ---copy file from one container to another container
+docker cp <filename> <containername>:/dir/
+container to local:
 docker cp <containername>:/tmp/<filename> . 
 docker stats >>> about usage
 if u want to see inditual 
@@ -99,10 +109,14 @@ if u want do delete the container, first u should stop the container
 docker rm <container name>
 docker rmi <imagename>
 at a time delete all images
+see all inages:
+suod docker images -a -q 
 docker rmi $(sudo docker images -a -q)
 create image from container:
  install cmt:
  apt-get install wget
+
+commit docker image with tag
  docker commit <container id> <img name>:<tagname>
 docker commit bdgu56497hk webapp:2.1
 push to dockerhub:
