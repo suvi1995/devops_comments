@@ -65,6 +65,14 @@ ws to local:
 >> git diff HEAD <filename>
 stage to last commit :
 >> git diff --staged < file name>
+specific commit and working directory:
+>> git diff <commit id> <file_name>
+staged area and specific commit:
+>> git diff --staged <commitid> 
+difference between 2 different commit:
+git diff <commitid> <commitid>
++ >> add
+->> delete
 --------------
 git log --oneline
 used to get commit id 
