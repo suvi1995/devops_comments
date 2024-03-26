@@ -73,6 +73,8 @@ difference between 2 different commit:
 git diff <commitid> <commitid>
 + >> add
 ->> delete
+local refo to remote repo:
+git diff master orgin/master
 --------------
 git log --oneline
 used to get commit id 
