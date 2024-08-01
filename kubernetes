@@ -3,3 +3,7 @@ kubernets
 cat /proc/cpuinfo | grep -i processor 
 it will show how many cpu there
 kubernetes will not recomment swap bcz it will throw error once we enable cluster.
+sudo swapoff -a 
+off swap in all nodes include master node till cluster enable 
+free -m 
+
