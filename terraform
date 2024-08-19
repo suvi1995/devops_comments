@@ -1,0 +1,4 @@
+if ypu want to excute the file, u can change the file
+sudo chmode +x file name
+1. install terraform in machine
+2. give permision to terraform ( create role)
