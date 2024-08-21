@@ -12,3 +12,11 @@ sudo chmode +x file name
 if you want to destory elements:
 >>> terraform destroy
 >>> enter value: yes
+
+terraform
+infrastructure as a code
+its let you build, change and verion infrstructure safely and efficiently 
+low-level component--->>> instances, storage, network
+high level ------>>>> DNS (Domain name serice), SaaS (Software as a service)
+hashicorp
+You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.
