@@ -29,6 +29,8 @@ container--excutable units of software in which application code is packaged alo
 kubelet--- receive info from masternode
 kuberproxy: communicate between one workernode to another workernode
 etc/kubernetes/manifasts have all the yaml files
+kubectl create -f pode.yaml
+kubectl desctibe <pode name>
 
 
 
