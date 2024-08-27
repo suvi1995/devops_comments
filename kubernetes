@@ -1,4 +1,6 @@
 kubernets
+google is introduced kubernetes 
+now maintained by CACN
 
 cat /proc/cpuinfo | grep -i processor 
 it will show how many cpu there
@@ -6,4 +8,28 @@ kubernetes will not recomment swap bcz it will throw error once we enable cluste
 sudo swapoff -a 
 off swap in all nodes include master node till cluster enable 
 free -m 
+in kubernetes have one masternode and multiful workernde
+masternode only give instruction to workernode
+in masternode have to install ETCD, control manager, scheduler
+ETCD server -----> database
+     in the database all the data's are stored in key and value pair combination
+control server:
+   it will decide how many container have to run in workernode
+  it will maintain heartbeat
+if its die then it assign work to healthy node
+scheduler:
+it will assign the work to workernode
+kubectl get ns  (namespace)
+kubectl get pods -n kube-system
+kubectl get nodes
+kubectl describe nodes node1(name of the node)
+node-its a physical or virtual
+pod--- it's a logical wrapper for a containers
+container--excutable units of software in which application code is packaged along with its liabraries
+kubelet--- receive info from masternode
+kuberproxy: communicate between one workernode to another workernode
+etc/kubernetes/manifasts have all the yaml files
+
+
+
 
