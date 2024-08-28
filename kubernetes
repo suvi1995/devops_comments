@@ -40,7 +40,27 @@ kubectl -f pod.ymal --ns dev
 
 k get pods --selector app=app1
 k get svc ---- or k get service
-
-
-
+k run ind-pod --image nginx 
+k get node
+    k get node
+    5  k get pod
+    6  k run pod1 --image iginx 
+    7  k get pod -o wide
+    8  k taint node node01 env=uat:NoSchedule 
+    9  k run pod2 --image iginx 
+   10  k get pod -o wide
+   11  history
+   12  k describe node nodeo1
+   13  k describe node node01
+   14  k describe node node01 | less
+   15  k edit pod2
+   16  k edit pod pod2
+   17  k run pod3 --image iginx --dry-run=client -o yaml
+   18  k run pod3 --image iginx --dry-run=client -o yaml > pod3.yaml
+   19  k edit pod pod3.yqml
+   20  k edit pod pod3.yaml
+   21  vi pod3.yaml 
+   22  k create -f pod3.yaml 
+   23  k get pod -o wide
+k taint node node01 env=uat:NoSchedule-    untaint
 
