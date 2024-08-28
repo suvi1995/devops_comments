@@ -32,6 +32,15 @@ etc/kubernetes/manifasts have all the yaml files
 kubectl create -f pode.yaml
 kubectl desctibe <pode name>
 
+kubectl get namespace
+kubectl create namespace dev 
+kubectl config view | grep namespace
+kubectl config set-context --current --namespaces=<ns>
+kubectl -f pod.ymal --ns dev
+
+k get pods --selector app=app1
+k get svc ---- or k get service
+
 
 
 
