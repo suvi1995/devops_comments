@@ -124,3 +124,39 @@ Whenever anything is required from the remote repository, it is first downloaded
 Central repository refers to the Maven community that comes into action when there is a need for dependencies, and those dependencies cannot be found in the local repository.
 Maven downloads the dependencies from here in the local repository whenever needed.
 
+mvn archetype:generate
+2170
+8
+com.bestwayjava
+mydemoprojcet
+snapshot
+com.bestwayjava.app
+yes
+
+ mvn validate
+ mvn compile
+ mvn tes
+ mvn test
+ mvn package
+ mvn install
+ mvn package
+ mvn verify
+full projcet has been created 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
