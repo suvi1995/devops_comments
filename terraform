@@ -20,3 +20,5 @@ low-level component--->>> instances, storage, network
 high level ------>>>> DNS (Domain name serice), SaaS (Software as a service)
 hashicorp
 You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle.
+uninstall terraform
+sudo apt-get remove --purge terraform
