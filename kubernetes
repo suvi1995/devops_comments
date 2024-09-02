@@ -1,6 +1,14 @@
 kubernets
-google is introduced kubernetes 
-now maintained by CACN
+2015 google is introduced kubernetes 
+now maintained by CACF 
+docker is a micro service
+it's difficult to  manage to contianer in docker that's they move into kubernets
+like kubernetees no of software intriduce befor kuber(nord, rancher, dockerswarm)
+kubernetes satisfies the all the bussiness requirement like storage access networking security and ceritificates
+we need a docker to create container
+masternode (admin) 
+workernode1
+workernode1
 
 cat /proc/cpuinfo | grep -i processor 
 it will show how many cpu there
