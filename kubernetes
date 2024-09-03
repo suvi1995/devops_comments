@@ -106,6 +106,8 @@ kind:replica
 metadata
 spec
 replicatset means how many to be create in wokernode
+deployment---service
+             how many pod and container
 
 
 
