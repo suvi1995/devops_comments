@@ -105,7 +105,7 @@ apiVersion:app/v1
 kind:replica
 metadata
 spec
-
+replicatset means how many to be create in wokernode
 
 
 
