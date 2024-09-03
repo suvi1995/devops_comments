@@ -21,21 +21,26 @@ masternode only give instruction to workernode
 in masternode have to install ETCD, control manager, scheduler
 ETCD server -----> database
      in the database all the data's are stored in key and value pair combination
+     all transaction are saved  in this database.
 control server:
-   it will decide how many container have to run in workernode
-  it will maintain heartbeat
-if its die then it assign work to healthy node
+   it will decide how many container have to be run in workernode
+   it will maintain heartbeat
+   if its die then it assign work to healthy node
 scheduler:
 it will assign the work to workernode
 kubectl get ns  (namespace)
 kubectl get pods -n kube-system
 kubectl get nodes
 kubectl describe nodes node1(name of the node)
-node-its a physical or virtual
-pod--- it's a logical wrapper for a containers
+node-its a physical (cpu) or virtual (vmr or cloud)
+pod--- it's a logical wrapper for a containers >>> container to be cretaed in pod 
 container--excutable units of software in which application code is packaged along with its liabraries
 kubelet--- receive info from masternode
 kuberproxy: communicate between one workernode to another workernode
+one masternode and multiful workernode
+workernode--->pod---->container (in real time multiful pod and multiful container to be run)
+in masternode is another name is controlplan 
+masternode + workernode its a kubernets cluster
 etc/kubernetes/manifasts have all the yaml files
 kubectl create -f pode.yaml
 kubectl desctibe <pode name>
@@ -71,4 +76,48 @@ k get node
    22  k create -f pod3.yaml 
    23  k get pod -o wide
 k taint node node01 env=uat:NoSchedule-    untaint
+======================================================================================
+masternode
+kubeapiserver --------->> primary component / communication between masternode and workernode
+                          iis a like admin
+ETDC ------------------>> it's a inbuild datebase && internal database
+                            all the info are saved in the database
+
+kubecontroller--------->> monitors the workernode to health of the container. because if everthng ok means kubeapi server create a pod in that workernode
+kubeserver------->>> findout the best pod to create a container
+=======================================================
+workernode:
+-------------------------------------
+kubelet -----> operate pod from api server instruction
+kubeproxy ----->maintain network rules on node and enable between pod and external api server
+                communicate between one workernode to another workernode
+====================================
+yaml:
+pod creation:
+------------------
+apiVersion: v1
+kind:pod
+metadata
+spec
+replicaset creation:
+------------------
+apiVersion:app/v1
+kind:replica
+metadata
+spec
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
