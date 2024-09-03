@@ -108,7 +108,13 @@ spec
 replicatset means how many to be create in wokernode
 deployment---service
              how many pod and container
+deployment:
+kubectl create deployment --image nginx:1.21 --port 80 --replicas:3 test-rs
+                                   <img>         <expose port>     <how many pod>   <name of the label>
+kubectl get deploy
+kubectl dectribe deploy test-rs
 
+     
 
 
 
