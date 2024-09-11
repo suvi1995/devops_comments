@@ -1,0 +1,4 @@
+ helm create ws
+and edit value.yaml
+  helm install websever ws
+helm list >>>>> see our helm list
