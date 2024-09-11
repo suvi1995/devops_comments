@@ -124,6 +124,9 @@ kubectl get services
 kubectl get deployments
 kubectl get statefulsets
 kubectl get replicasets
+kubectl delete node <old-node-name>
+systemctl stop kubelet
+
 
 
 
