@@ -114,6 +114,17 @@ kubectl create deployment --image nginx:1.21 --port 80 --replicas:3 test-rs
 kubectl get deploy
 kubectl dectribe deploy test-rs
 =============================================
+kubectl delete pod <pod-name>
+kubectl delete service <service-name>
+kubectl delete deployment <deployment-name>
+kubectl delete statefulset <statefulset-name>
+kubectl delete replicaset <replicaset-name>
+kubectl get pods
+kubectl get services
+kubectl get deployments
+kubectl get statefulsets
+kubectl get replicasets
+
 
 
      
