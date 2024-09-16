@@ -1,0 +1,29 @@
+---------------------------------------------------------------------------
+Ansible using tomcat install 
+    1  sudo apt update
+    2  sudo apt install software-properties-common -y
+    3  sudo add-apt-repository --yes --update ppa:ansible/ansible
+    4  sudo apt install ansible -y
+    5  sudo vi /etc/ansible/ansible.cfg
+    6  sudo nano /etc/ansible/ansible.cfg
+    7  sudo vi /etc/ansible/hosts
+    8  ssh-keygen
+    9  ssh-copy-id 172.31.31.56
+   10  git clone https://github.com/suvi1995/DEVOPS_YAML.git
+   11  ls
+   12  cd DEVOPS_YAML/
+   13  ll
+   14  ansible-playbook tomcat.yaml
+   15  cd ..
+   16  cd DEVOPS_YAML/
+   17  cd /opt
+   18  ll
+   19  cd tomcat/
+   20  ll
+   21  cd latest
+   22  ll
+   23  cd webapps/
+   24  ll
+   25  sudo wget https://get.jenkins.io/war-stable/2.426.1/jenkins.war
+   26  sudo cat /opt/tomcat/.jenkins/secrets/initialAdminPassword
+   ----------------------------------------------------------------------
