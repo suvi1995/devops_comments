@@ -127,10 +127,10 @@ Maven downloads the dependencies from here in the local repository whenever need
 mvn archetype:generate
 2170
 8
-com.bestwayjava
-mydemoprojcet
+com.demoprj
+demoprj
 snapshot
-com.bestwayjava.app
+com.demoprj.app
 yes
 
  mvn validate
