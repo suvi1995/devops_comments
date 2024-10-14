@@ -1,0 +1,12 @@
+what is containerization?
+  containerization is a lihgtweight virtualization technology alternative to hypervisor virtualization. 
+  Any application can be bundled in a container can run without wories aboubt dependancies, libraries and binaries.
+  Because container create the isolated environment with all the required dependancies, libraries and binaries to run your application without any issues. 
+  Hence you can build the packages and ship the application to any enviornment and run it.
+  So Containers are designed to run on physical server, virtual machines and any cloud instances.
+What is Virtualization?
+Virtualization is a technology that creates virtual versions of computer resources such as hardware platforms, operating systems, storage devices, and network resources. It’s like creating a software-based replica of a physical machine, allowing you to run multiple isolated environments on the same hardware or across a distributed system.
+Imagine you have a powerful computer but you only use a small portion of its resources. 
+Virtualization allows you to split that computer into several virtual machines (VMs), each acting like a separate computer with its operating system and applications. 
+Each virtual machine is isolated from the others, meaning issues in one virtual machine won’t affect others. 
+This allows you to optimize resource utilization, run multiple applications on a single machine, and improve scalability by easily adding or removing virtual machines as needed
