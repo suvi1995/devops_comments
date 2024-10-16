@@ -1,5 +1,1 @@
-1. What is Docker, and why is it used?
-Answer:
-Docker is an open-source platform that automates the deployment of applications inside lightweight containers. 
-Containers provide a consistent environment that works across multiple platforms, ensuring that an application behaves the same, regardless of where it is run. 
-Docker helps improve efficiency, portability, and resource utilization.
+
