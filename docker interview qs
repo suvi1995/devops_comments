@@ -31,9 +31,9 @@ also container designed to slove the model problems and application management i
 
 6. How many Docker components are there?
 There are three docker components, they are - Docker Client, Docker Host, and Docker Registry.
-Docker Client: This component performs “build” and “run” operations for the purpose of opening communication with the docker host.
-Docker Host: This component has the main docker daemon and hosts containers and their associated images. The daemon establishes a connection with the docker registry.
-Docker Registry: This component stores the docker images. There can be a public registry or a private one. The most famous public registries are Docker Hub and Docker Cloud.
+Docker Client: This component performs “build” and “run” operations for the purpose of opening communication with the docker host.
+Docker Host: This component has the main docker daemon and hosts containers and their associated images. The daemon establishes a connection with the docker registry.
+Docker Registry: This component stores the docker images. There can be a public registry or a private one. The most famous public registries are Docker Hub and Docker Cloud.
 
 7.What are the Features of Docker?
 Docker features containerization for providing consistent deployment , using resources efficient shared kernel utilization, and provides seamless portability across environments. It enhances the security through isolation of containers supporting versioning and automated builds. It offers a rich number of pre-built images for streamlined application development and deployment.
