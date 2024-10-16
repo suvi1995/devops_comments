@@ -1,12 +1,53 @@
-what is containerization?
+1.what is containerization?
   containerization is a lihgtweight virtualization technology alternative to hypervisor virtualization. 
   Any application can be bundled in a container can run without wories aboubt dependancies, libraries and binaries.
   Because container create the isolated environment with all the required dependancies, libraries and binaries to run your application without any issues. 
   Hence you can build the packages and ship the application to any enviornment and run it.
   So Containers are designed to run on physical server, virtual machines and any cloud instances.
-What is Virtualization?
+
+2.What is Virtualization?
 Virtualization is a technology that creates virtual versions of computer resources such as hardware platforms, operating systems, storage devices, and network resources. It’s like creating a software-based replica of a physical machine, allowing you to run multiple isolated environments on the same hardware or across a distributed system.
 Imagine you have a powerful computer but you only use a small portion of its resources. 
 Virtualization allows you to split that computer into several virtual machines (VMs), each acting like a separate computer with its operating system and applications. 
 Each virtual machine is isolated from the others, meaning issues in one virtual machine won’t affect others. 
 This allows you to optimize resource utilization, run multiple applications on a single machine, and improve scalability by easily adding or removing virtual machines as needed
+
+3. What is Docker, and why is it used?
+Answer:
+Docker is an open-source platform that automates the deployment of applications inside lightweight containers. 
+Containers provide a consistent environment that works across multiple platforms, ensuring that an application behaves the same, regardless of where it is run. 
+Docker helps improve efficiency, portability, and resource utilization.
+
+4.advantages of containerization?
+  containers are isolated and doesn't required operating system, its share the host karnal
+  containers can run the same servers and use the same resources, they do not intract  with each other because containers are isolated.
+  if one of the application crashes, other containers with same application will keep running without any issues
+  it portable and light weight operating system and it containes only the required binaries, libraries and depandancies to run the application. so it can be move anywhere easily and can run without worrying about compatibility, dependancies kind of issues.
+  Faster and resource efficiency- its very fast to foot, because its lightweight and start in less then a second since they do not require an oprating system boot
+ 5. difference between containerization and virtualization?
+virtualization is technology allow us to multiful operating system to share the  single hardware processorr
+conatinerization is application specific virtualization, its provides application with dedicated environment in the form of container to run on, which can be deployed and run anywhere without a dedicated virtual machine with operating system for each application
+also container designed to slove the model problems and application management isseues. its not replacement of virtualizatoion, but it's complementry to  it.
+
+6. How many Docker components are there?
+There are three docker components, they are - Docker Client, Docker Host, and Docker Registry.
+Docker Client: This component performs “build” and “run” operations for the purpose of opening communication with the docker host.
+Docker Host: This component has the main docker daemon and hosts containers and their associated images. The daemon establishes a connection with the docker registry.
+Docker Registry: This component stores the docker images. There can be a public registry or a private one. The most famous public registries are Docker Hub and Docker Cloud.
+
+7.What are the Features of Docker?
+Docker features containerization for providing consistent deployment , using resources efficient shared kernel utilization, and provides seamless portability across environments. It enhances the security through isolation of containers supporting versioning and automated builds. It offers a rich number of pre-built images for streamlined application development and deployment.
+
+8. What are the Pros and Cons of Docker?
+Pros of Docker
+
+Portability: It enables consistent deployment across various environments.
+Resource Efficiency: Optimizing of resource usage with a shared kernel will be done effectively.
+Isolation: It provides security through isolation of process and file system.
+Automation: it supports automated builds and streamlining development workflow
+Cons of Docker
+Learning Curve: Initial learning of the containerization concepts will bit new to understand.
+Additional Resources: Containers use some more resources compared to running applications directly on host.
+Security Concerns: Misconfigurations may lead to the security risks if not properly managed.
+Container Orchestration Complexity: Management of orchestration tools will be complex for larger-scale deployments.
+
