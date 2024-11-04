@@ -6,4 +6,26 @@ Jenkins is a self-contained, open-source automation server that can be used to a
   3. support multiple types of pipeline
   4. easy to use & automate the task
   5. Free to use I.E opensource
-3. 
+3. explain diffrence between jenkins and hudson?
+    jenkins is a fork of hudson, an earlier CI/CD tool.
+    After a dispute over project governence, jenkins was created as a community-driven fork of hudson.
+    jenkins has since become the more popular and actively maintained project
+    A jenkins pipeline is a suite of plugins that allows teams to define their software delivery process as code
+    it enables the creation of complex workflows, including build, test, deployment stages, which can be version-controlled alongside application code.
+4. how to fefine jenkins pipeline?  
+  jenkins pipeline can be defined using a jenkinsfile, which is a text file written in groovy syntax.
+  jenkinsfile describe the stages, steps, and confiurations of the pipeline, allowing for automated and repeatable software delivery processes.
+5. difference between scripted and declarative jenkins pipeline?
+sripted pipeline use a groovy-based scripting language to define pipeline logic, providing more flexibility
+and power but requiring more coding effort.
+Declarative pipeline use a simpler, more structured syntax for defining pipelines, making them easier to read, write, and maintain.
+6. what is a jenkins agent (Node) and how does it work?
+  A jenkins agent, also known as a node, is a machine (physical or virtua) that executes taks as part of a jenkisn build process.
+  Agents can run on the same machine as the jenkins server (master) or on remote machine.
+  they communicate with the jenkins master to recive build instruction and report results.
+
+   
+  
+ 
+    
+
