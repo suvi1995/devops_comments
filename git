@@ -1,6 +1,7 @@
 1. VCS?
     version control system as a system that keeps all record of changes made on specific project and also helps us to ensure all the developer in a team working on same projwct or not. 
 it gives confidents to the devloper to fix bug and make any changes. if anything goes wrong then previous version will be restore at anytime.
+Multiple developer works on multiple features on same project end of the day they merge into master branch. Its difficult to find-out who is done which features 
 2. what is git?
     Git is opensource distributed version control system and source code management (scm) system with an insistence to control small and large projects with speed and efficiency.
 The main objectives of Git:
