@@ -87,6 +87,76 @@ Local Repository
 Remote Repository
 Central Repository
 --------------------------------
+which command used build a maven site?
+mvn site
+The mvn site command generates a project documentation website based on the information specified in your project's pom.xml file. This site typically includes reports about the project, such as:
+Project Information: Description, license, dependencies, and developers.
+Reports: Test results, code coverage, static analysis, etc.
+The site is generated in the target/site directory by default.
+---------------------------
+what are the differnt conventions in used while naming a project in maven?
+artifactid:
+use loweacse latters
+aviod special character or spaces
+use hypens and underscors for word seperation
+groupid:
+use loweacse latters
+aviod special character or spaces
+following revers dommain naming convention (com.example)
+version:
+following the semantic versioning format (1.0.0)
+Use a format of MAJOR.MINOR.PATCH.
+MAJOR: Introduces breaking changes.
+MINOR: Adds new features while maintaining backward compatibility.
+PATCH: Fixes bugs without affecting compatibility.
+Use -SNAPSHOT for versions still in development.
+----------------------------------
+what is a maven artifact:
+In maven, artifact is a deployable component of the project. it could be a JAR (jave arceive), WAR (web application archeive), EAR (enterprice archieve) or other file produced during the build process.
+Each artifact identified by group id, artifact id and version in the maven repository.
+-----------------------------------------
+what are the phase of clean life cycle?
+pre clean
+clean
+post clean
+--------------------------------------
+what are the phases of site life cycle?
+pre-site
+site
+post-site
+site-deploy
+---------------------------------------
+what is meant by maven plugins?
+A Maven plugin is a collection of goals that can be executed during the build process to perform specific tasks. Maven plugins are essential components of the Maven Build Lifecycle, and they help automate repetitive tasks such as compiling code, running tests, packaging applications, and deploying artifacts. Each plugin is made up of one or more goals, and each goal represents a specific task (e.g., compiling Java files, generating Javadoc, etc.).
+Maven plugins can be used in various phases of the build lifecycle to extend Maven’s functionality.
+--------------------------------------
+Why are Maven Plugins used?
+Plugins are the central feature of Maven that allow for the reuse of common build logic across multiple projects. They do this by executing an "action" (i.e. creating a WAR file or compiling unit tests) in the context of a project's description - the Project Object Model (POM).
+Maven Plugins are used to: 
+Create a JAR file.
+Create a WAR file.
+Compile code files.
+Unit testing of code.
+Create project documentation.
+Create project reports.
+-------------------------------
+what are the types of maven plugins?
+build plugins
+excuted during the build and are configured in the <buil/> element of pom.xml
+such maven-compiler-plugins
+such maven-jar-plugins
+such maven-aessembly-plugins
+such maven-compiler-plugins
+reporting plugins:
+excuted during the stage generation and are configured in the <reporting/> elementd of the pom.xml
+maven-surefire-plugins
+maven-checkstyle-plugins
+maven-pmd-plugins
+maven-javadoc-plugins
+maven-dependency-plugins
+-------------------------------
+
+
 dependencies:
  <dependencies>
     <dependency>
@@ -107,16 +177,6 @@ verify
 install-- install in local repo
 deploy -- install in remote rep's to use by other projects 
 -------------------------------
-Why are Maven Plugins used?
-Plugins are the central feature of Maven that allow for the reuse of common build logic across multiple projects. They do this by executing an "action" (i.e. creating a WAR file or compiling unit tests) in the context of a project's description - the Project Object Model (POM).
-Maven Plugins are used to: 
-Create a JAR file.
-Create a WAR file.
-Compile code files.
-Unit testing of code.
-Create project documentation.
-Create project reports.
--------------------------------
 How does Maven Architecture work?
 Maven architecture works in three steps, which are as follows:
 The first step is to read the pom.xml file.
@@ -125,7 +185,6 @@ Lastly, it creates and generates a report according to the requirements, and exe
 --------------------------
 What are the different types of Maven Repositories?
 There are three types of Maven repositories:
-
 1. Local Repository: 
 Local repository refers to the machine of the developer where all the project material is saved.
 The local repository contains all the dependency jars.
