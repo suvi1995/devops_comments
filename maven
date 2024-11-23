@@ -23,6 +23,9 @@ What is POM?
 Project Object Model (POM) refers to the XML files with all the information regarding project and configuration details.
 It has the description of the project, information regarding the versioning and configuration management of the project.
 The XML file is in the project home directory. When we tend to execute a task, Maven searches for the POM in the current directory.
+------------------------------------------
+what is difference between ant and maven?
+
 --------------------------------------
 What all is included in the POM?
 POM contains the following configurations:
@@ -61,6 +64,29 @@ then install maven
 like sudo apt install maven -y
 then check mvn version
 ----------------------------------
+what is the command insatll jar file in local repository?
+mvn install used to install Jar file in lical repoitory
+to install JAR file mannually into local repository, the following plugins used
+mvn install:install-file-Dfile=<file path>.
+mvn install:install-file -Dfile=<path-to-jar> -DgroupId=<group-id> -DartifactId=<artifact-id> -Dversion=<version> -Dpackaging=jar
+-------------------------------------------
+how to you know the version of the maven being used?
+mvn --version command used to check the current version
+-----------------------------------------------
+What is Maven Build Lifecycle?
+Maven lifecycle is a collection of steps that are to be followed, to build a project. There are three built-in build lifecycles:
+Default: Handles project deployment.
+Clean: Handles project cleaning.
+Site: Handles the creation of the project site’s documentation.
+----------------------
+What is a Maven Repository?
+Maven repositories refer to the directories of packaged JAR files that contain metadata. The metadata refers to the POM files relevant to each project. 
+This metadata is what allows Maven to download dependencies.
+There are three types of repositories:
+Local Repository
+Remote Repository
+Central Repository
+--------------------------------
 dependencies:
  <dependencies>
     <dependency>
@@ -91,26 +117,12 @@ Unit testing of code.
 Create project documentation.
 Create project reports.
 -------------------------------
-What is Maven Build Lifecycle?
-Maven lifecycle is a collection of steps that are to be followed, to build a project. There are three built-in build lifecycles:
-Default: Handles project deployment.
-Clean: Handles project cleaning.
-Site: Handles the creation of the project site’s documentation.
-----------------------
 How does Maven Architecture work?
 Maven architecture works in three steps, which are as follows:
 The first step is to read the pom.xml file.
 Then, it downloads the dependencies defined in pom.xml into the local repository from the central repository.
 Lastly, it creates and generates a report according to the requirements, and executes life-cycles, phases, goals, plugins, etc.
 --------------------------
- What is a Maven Repository?
-Maven repositories refer to the directories of packaged JAR files that contain metadata. The metadata refers to the POM files relevant to each project. 
-This metadata is what allows Maven to download dependencies.
-There are three types of repositories:
-Local Repository
-Remote Repository
-Central Repository
---------------------------------
 What are the different types of Maven Repositories?
 There are three types of Maven repositories:
 
