@@ -35,7 +35,7 @@ Plugins
 Plugin configuration
 Resources 
 ------------------------
- What are the minimum required elements for POM? 
+What are the minimum required elements for POM? 
 The minimum required elements for POM are:
 project root
 modelVersion – should be 4.0.0
