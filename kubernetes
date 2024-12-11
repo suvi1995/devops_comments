@@ -147,6 +147,26 @@ kubectl replace --force -f <Yamal file name>
 kubectl get pod kube-systen | grep -i < name of the pod or node>
 k top nodes
 monitor via grafana integration:
+k get logs <pod name>
+kubectl run my-pod --image nginx --->creating pod
+kubectl edit pod <pod name>
+k edit pod my-pod
+=================================
+rollback:
+there ara two ways to rollback kubernets
+  1. recreate 
+  2. rolling update
+Recreate:
+ in the recreate, it will down the all pods and up (create) new pods for the new updates. if any errors cause the application will go down
+rolling update:
+up and down occure one by one.
+create deployment yaml file
+do deployment
+and upade the new version
+kubectl rollout status deployment <deployment name>
+kubectl history deployment <name of the deployment>
+kubectl set image deployment/nginx busybox=busybox nginx=nginx:1.9.1
+
 
 
 
