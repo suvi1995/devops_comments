@@ -166,6 +166,9 @@ and upade the new version
 kubectl rollout status deployment <deployment name>
 kubectl history deployment <name of the deployment>
 kubectl set image deployment/nginx busybox=busybox nginx=nginx:1.9.1
+k get pod
+k get deployments.apps 
+k get rs
 
 
 
