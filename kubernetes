@@ -164,7 +164,7 @@ create deployment yaml file
 do deployment
 and upade the new version
 kubectl rollout status deployment <deployment name>
-kubectl history deployment <name of the deployment>
+k rollout history deployment nginx-deployment <name of the deployment>
 kubectl set image deployment.v1.apps/nginx-deployment nginx=nginx:1.16.1
 k get pod
 k get deployments.apps 
