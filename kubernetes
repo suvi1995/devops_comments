@@ -126,6 +126,29 @@ kubectl get statefulsets
 kubectl get replicasets
 kubectl delete node <old-node-name>
 systemctl stop kubelet
+--------------------------------------
+monitor cluster:
+curl -LO https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+edit components.yaml
+ spec:
+      hostNetwork: true  <this should be true>
+      containers:
+      - args:
+        - --cert-dir=/tmp
+        - --secure-port=10250
+        - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
+        - --kubelet-use-node-status-port
+        - --metric-resolution=15s
+        - --kubelet-insecure-tls <add in the components.yml file>
+kubectl create -f <components.yaml>
+if you want to replace the existing one
+kubectl replace --force -f <Yamal file name>
+kubectl get pod kube-systen | grep -i < name of the pod or node>
+k top nodes
+monitor via grafana integration:
+
+
 
 
 
